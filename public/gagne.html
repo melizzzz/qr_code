@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Félicitations !</title>
+    <link href="https://cdn.jsdelivr.net/npm/@cdpn/particles.js@2.0.0/dist/particles.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f1f1f1;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            color: green;
+            font-size: 3em;
+            margin-top: 20%;
+        }
+        .message {
+            font-size: 1.5em;
+            color: darkgreen;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bravo, vous avez gagné ! 🎉</h1>
-    <p>Venez récupérer votre lot au stand !</p>
+    <h1>Vous avez gagné ! 🎉</h1>
+    <p class="message">Félicitations, vous êtes un gagnant !</p>
+    
+    <!-- Confettis effect -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <div id="confetti"></div>
+
+    <script>
+        particlesJS('confetti', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffcc00"
+                },
+                shape: {
+                    type: "circle"
+                },
+                opacity: {
+                    value: 0.5
+                },
+                size: {
+                    value: 5
+                },
+                move: {
+                    enable: true,
+                    speed: 3
+                }
+            }
+        });
+    </script>
 </body>
 </html>
