@@ -2,14 +2,26 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.html",
+      "src": "public/**/*",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/",
-      "dest": "/qr.html"
+      "dest": "/public/qr.html"
+    },
+    {
+      "src": "/qr.html",
+      "dest": "/public/qr.html"
+    },
+    {
+      "src": "/gagne.html",
+      "dest": "/public/gagne.html"
+    },
+    {
+      "src": "/perdu.html",
+      "dest": "/public/perdu.html"
     }
   ]
 }
